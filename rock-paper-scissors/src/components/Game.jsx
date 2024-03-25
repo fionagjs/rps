@@ -59,7 +59,6 @@ const Game = ({ score, myChoice, setScore }) => {
   //Body
   return (
     <div className="game">
-      <div className="picks-container">
       <div className="you_picked">
         <span className="text">You Picked</span>
         <div className={`icon icon--${myChoice} ${
@@ -81,7 +80,6 @@ const Game = ({ score, myChoice, setScore }) => {
         ) : (
           <div className="counter">{counter}</div>
         )}
-      </div>
       </div>
     </div>
   );
