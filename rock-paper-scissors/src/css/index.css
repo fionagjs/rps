@@ -1,0 +1,96 @@
+* {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body {
+  background: radial-gradient(#1F2757, #131537);
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+body .game {
+  align-items: center;
+}
+
+.header {
+  border: 3px solid rgba(255, 255, 255, 0.2829);
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 700px; 
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .score-box {
+  padding: 1rem 2rem;
+  background-color: #ddd;
+  text-align: center;
+  border-radius: 5px;
+  min-width: 150px;
+  width: 5%;
+}
+
+.header .score-box span {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: #2A45C2;
+  font-weight: 600;
+}
+
+.header .score-box .score {
+  font-size: 64px;
+  color: #565468;
+  font-weight: 700;
+}
+
+/*----- Footer ---- */
+.rules {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 7px 25px;
+  border-radius: 8px;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  background: transparent;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+}
+
+@media screen and (max-width: 700px) {
+
+  .header {
+  height: auto;
+ width: 300px;
+  }
+
+  .header .score-box {
+   height: auto;
+    min-width: 30px;
+  }
+  
+  .header .score-box span {
+    font-size: 10px;
+  }
+  
+  .header .score-box .score {
+    font-size: 40px;
+  }
+
+  .rules {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    align-self: center;
+    margin: 2rem 5rem;
+  }
+}

@@ -1,0 +1,255 @@
+/*------Game Icon-----*/
+.icon--paper {
+    background-image: url("../images/icon-paper.svg");
+    color: hsl(230, 89%, 62%);
+    background-repeat: no-repeat;
+    background-color: #FFFFFF;
+    background-position: center;
+    box-shadow: inset 0px 5px 6px grey, 
+    0px 8px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .icon--scissors {
+    background-image: url("../images/icon-scissors.svg");
+    color: hsl(39, 89%, 49%);
+    background-repeat: no-repeat;
+    background-color: #FFFFFF;
+    background-position: center;
+    box-shadow: inset 0px 5px 6px grey, 
+    0px 8px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .icon--rock {
+    background-image: url("../images/icon-rock.svg");
+    color: hsl(349, 71%, 52%);
+    background-repeat: no-repeat;
+    background-color: #FFFFFF;
+    background-position: center;
+    box-shadow: inset 0px 5px 6px grey, 
+    0px 8px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .icon--lizard {
+    background-image: url("../images/icon-lizard.svg");
+    color: hsl(287, 71%, 52%);
+    background-repeat: no-repeat;
+    background-color: #FFFFFF;
+    background-position: center;
+    box-shadow: inset 0px 5px 6px grey, 
+    0px 8px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .icon--spock {
+    background-image: url("../images/icon-spock.svg");
+    color: hsl(184, 89%, 62%);;
+    background-repeat: no-repeat;
+    background-color: #FFFFFF;
+    background-position: center;
+    box-shadow: inset 0px 5px 6px grey, 
+    0px 8px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  /*------ Start & Bonus ------ */
+.start,
+.bonus{
+  width: 100%;
+  position: relative;
+  margin-top: 3.125rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.triangle,
+.pentagon {
+position: absolute;
+align-self: center;
+margin-top: 4.375rem;
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+}
+
+.items .icon {
+  height: 160px;
+  width: 160px;
+  border: 18px solid;
+  border-radius: 50%;
+  transition: transform .2s;
+}
+
+.items .icon--paper:hover,
+.items .icon--scissors:hover,
+.items .icon--rock:hover,
+.items .icon--lizard:hover,
+.items .icon--spock:hover{
+  box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.05);
+  transform: scale(1.1);
+}
+
+
+/*------ Bonus ------ */
+.bonus{
+  margin-top: 10px!important;
+}
+
+.pentagon {
+margin-top: 3rem!important;
+}
+
+.bonus .items .icon {
+  height: 100px!important;
+  width: 100px!important;
+}
+
+
+/*------ Game ------ */
+.game {
+    display: flex;
+    margin-top: 50px;
+    flex-wrap: nowrap;
+    gap: 5rem;
+  }
+  
+  .you_picked {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .you_picked .text,
+  .house_picked .text,
+  .result .text {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  
+  .you_picked .icon,
+  .house_picked .icon {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    border-color: transparent;
+    border: 25px solid;
+    background-size: 50%;
+  }
+  
+  .you_picked .icon--paper--winner,
+  .you_picked .icon--rock--winner,
+  .you_picked .icon--scissors--winner,
+  .you_picked .icon--lizard--winner,
+  .you_picked .icon--spock--winner,
+  .house_picked .icon--paper--winner,
+  .house_picked .icon--rock--winner,
+  .house_picked .icon--scissors--winner
+  .house_picked .icon--lizard--winner 
+  .house_picked .icon--spock--winner  {
+    box-shadow: 
+      0 0 0 50px rgba(255, 255, 255, 0.05), 
+      0 0 0 100px rgba(255, 255, 255,  0.05), 
+      0 0 0 150px rgba(255, 255, 255,  0.05); 
+  }
+  
+  .result {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .result .text{
+    font-size: 3rem!important;
+    margin-bottom: 10px!important;
+  }
+  
+  .result .again-btn {
+    background-color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: .8rem;
+    color: hsl(229, 25%, 31%);
+  }
+  
+  .result .again-btn:hover {
+    color: red;
+  }
+  
+  .house_picked {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .house_picked .counter {
+    height: 250px;
+    width: 250px;
+    margin: 30px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .3);
+    font-size: 8rem;
+    display: flex;
+    color: transparent;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+
+  @media screen and (max-width: 700px) {
+    .items .icon {
+      height: 80px;
+      width: 80px;
+      border: 10px solid;
+      border-radius: 50%;
+      transition: transform .2s;
+    }
+
+    .start .items .icon--paper{
+      transform: translateX(-1rem) translateY(2rem)!important;
+    }
+
+    .start .items .icon--rock{
+      transform: translateX(-6rem) translateY(16rem)!important;
+    }
+
+    .start .items .icon--scissors{
+      transform: translateX(7rem) translateY(2rem)!important;
+    }
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.you_picked,
+.house_picked {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px; 
+}
+
+.you_picked .icon,
+  .house_picked .icon {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border-color: transparent;
+    border: 18px solid;
+    background-size: 50%;
+  }
+
+.result {
+  margin-top: 20px; 
+  text-align: center; 
+}
+    
+  }
+  
