@@ -11,3 +11,8 @@
 
 ### Requirements
 1. Install your node.js which is **>=6.9.0** version.
+
+
+### Path
+1. Path to **rock-paper-scissors** game is **"/"**
+2. Path to **bonus** game is **"/bonus"**
